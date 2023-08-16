@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Shop;
+use App\Models\Shop;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 
 class ProductController extends Controller
@@ -25,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.shop.create');
     }
 
     /**
@@ -36,7 +38,39 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData=$request->validate([
+            'name'=>'required|max:255',
+            'category'=>'required',
+            'about'=>'required',
+            'img'=>'required',
+        ]);
+
+        $new_name="images".microtime().".jpg";
+        $img=Image::make($request->file("img"));
+
+        // images watermake
+        // dd($new_name);
+        $watermark = Image::make('logo.png');
+
+        $img->insert($watermark, 'bottom-right');
+        $img->save('public/thumb/'.$new_name);
+
+        //image resize
+        $img->fit(360,280, function($constraint){
+            $constraint->aspectRatio();
+        })->save('public/shop/'.$new_name);
+
+        $shops=new Shop([
+            'name'=>$request->get('name'),
+            'category'=>$request->get('category'),
+            'about'=>$request->get('about'),
+            'img'=>$new_name
+        ]);
+
+        $shops->save();
+        return redirect()->back()->with('success','Ma`lumot saqlandi !');
+
+
     }
 
     /**

@@ -17,17 +17,24 @@
     <meta name="keywords" content="flat ui, admin  Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="CodedThemes">
     <!-- Favicon icon -->
-    <link rel="icon" href="public/admin/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('public/admin/images/favicon.ico" type="image/x-icon')}}">
     <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="public/admin/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/admin/css/bootstrap/css/bootstrap.min.css')}}">
     <!-- themify-icons line icon -->
-    <link rel="stylesheet" type="text/css" href="public/admin/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/admin/icon/themify-icons/themify-icons.css')}}">
     <!-- ico font -->
-    <link rel="stylesheet" type="text/css" href="public/admin/icon/icofont/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/admin/icon/icofont/css/icofont.css')}}">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="public/admin/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/admin/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/admin/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/admin/css/jquery.mCustomScrollbar.css')}}">
+
+
+
+    <!--Text editor CDN-->
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -64,7 +71,7 @@
                             <i class="ti-search"></i>
                         </a>
                         <a href="index.html">
-                            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                            <img class="img-fluid" src="{{asset('public/admin/images/logo.png')}}" alt="Theme-Logo" />
                         </a>
                         <a class="mobile-options">
                             <i class="ti-more"></i>
@@ -96,7 +103,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+                                            <img class="d-flex align-self-center" src="{{asset('public/admin/images/user.png')}}" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">John Doe</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -106,7 +113,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+                                            <img class="d-flex align-self-center" src="{{asset('public/admin/images/user.png')}}" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">Joseph William</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -116,7 +123,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="d-flex align-self-center" src="assets/images/user.png" alt="Generic placeholder image">
+                                            <img class="d-flex align-self-center" src="public/admin/images/user.png" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">Sara Soudein</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -128,7 +135,7 @@
                             </li>
                             <li class="user-profile header-notification">
                                 <a href="#!">
-                                    <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <img src="{{asset('public/admin/images/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
                                     <span>John Doe</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
@@ -165,3 +172,239 @@
                     </div>
                 </div>
             </nav>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div class="">
+                                <div class="main-menu-header">
+                                    <img class="img-40 img-radius" src="{{asset('public/admin/images/avatar-4.jpg')}}" alt="User-Profile-Image">
+                                    <div class="user-details">
+                                        <span>John Doe</span>
+                                        <span id="more-details">UX Designer<i class="ti-angle-down"></i></span>
+                                    </div>
+                                </div>
+
+                                <div class="main-menu-content">
+                                    <ul>
+                                        <li class="more-details">
+                                            <a href="#"><i class="ti-user"></i>View Profile</a>
+                                            <a href="#!"><i class="ti-settings"></i>Settings</a>
+                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pcoded-search">
+                                <span class="searchbar-toggle">  </span>
+                                <div class="pcoded-search-box ">
+                                    <input type="text" placeholder="Search">
+                                    <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Layout</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a href="index.html">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Components</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="accordion.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Accordion</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="breadcrumb.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Breadcrumbs</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="button.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Button</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="tabs.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Tabs</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="color.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Color</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="label-badge.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Label Badge</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="tooltip.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Tooltip</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="typography.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Typography</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="notification.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Notification</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="icon-themify.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Icon</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Forms &amp; Tables</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li>
+                                    <a href="form-elements-component.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="bs-basic-table.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic Table</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Chart &amp; Maps</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li>
+                                    <a href="chart.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Chart</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="map-google.html">
+                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Maps</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                        <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Pages</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="auth-normal-sign-in.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Login</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="auth-sign-up.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Register</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="sample-page.html">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Sample Page</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Other</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu ">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Menu Levels</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class="">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-21">Menu Level 2.1</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                        <li class="pcoded-hasmenu ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Menu Level 2.2</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                            <ul class="pcoded-submenu">
+                                                <li class="">
+                                                    <a href="javascript:void(0)">
+                                                        <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                        <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.menu-level-31">Menu Level 3.1</span>
+                                                        <span class="pcoded-mcaret"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-23">Menu Level 2.3</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+

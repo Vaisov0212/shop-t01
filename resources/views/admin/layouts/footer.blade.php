@@ -1,4 +1,8 @@
 
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->
 <!--[if lt IE 9]>
@@ -45,22 +49,29 @@
 <![endif]-->
 <!-- Warning Section Ends -->
 <!-- Required Jquery -->
-<script type="text/javascript" src="public/admin/js/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="public/admin/js/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="public/admin/js/popper.js/popper.min.js"></script>
-<script type="text/javascript" src="public/admin/js/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="{{asset('public/admin/js/jquery/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/jquery-ui/jquery-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/popper.js/popper.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- jquery slimscroll js -->
-<script type="text/javascript" src="public/admin/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
 <!-- modernizr js -->
-<script type="text/javascript" src="public/admin/js/modernizr/modernizr.js"></script>
-<script type="text/javascript" src="public/admin/js/modernizr/css-scrollbars.js"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/modernizr/modernizr.js')}}"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/modernizr/css-scrollbars.js')}}"></script>
 <!-- classie js -->
-<script type="text/javascript" src="public/admin/js/classie/classie.js"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/classie/classie.js')}}"></script>
 <!-- Custom js -->
-<script type="text/javascript" src="public/admin/js/script.js"></script>
-<script src="public/admin/js/pcoded.min.js"></script>
-<script src="public/admin/js/demo-12.js"></script>
-<script src="public/admin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="{{asset('public/admin/js/script.js')}}"></script>
+<script src="{{asset('public/admin/js/pcoded.min.js')}}"></script>
+<script src="{{asset('public/admin/js/demo-12.js')}}"></script>
+<script src="{{asset('public/admin/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+
+{{-- text editor script --}}
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+@yield('scripts')
+
 </body>
 
 </html>

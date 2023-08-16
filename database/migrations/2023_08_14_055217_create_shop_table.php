@@ -18,7 +18,7 @@ class CreateShopTable extends Migration
             $table->string('name');
             $table->string('img');
             $table->string('category');
-            $table->string('about');
+            $table->text('about');
             $table->timestamps();
         });
     }
